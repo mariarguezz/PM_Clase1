@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace = "com.example.pm_clase1"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.example.pm_clase1"
         minSdk = 24
-        targetSdk = 35
+        targetSdk = 36
         versionCode = 1
         versionName = "1.0"
 
@@ -44,6 +44,9 @@ dependencies {
     implementation(libs.androidx.compose.ui.graphics)
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.compose.material3)
+    implementation(libs.androidx.camera.core)
+    implementation(libs.androidx.camera.lifecycle)
+    implementation(libs.androidx.camera.view)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -61,5 +64,5 @@ dependencies {
 
     // ExoPlayer (Media3)
     implementation("androidx.media3:media3-exoplayer:1.10.0")
-    implementation("androidx,media3:media3-ui:1.10.0")
+    implementation("androidx.media3:media3-ui:1.10.0")
 }
