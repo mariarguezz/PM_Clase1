@@ -153,8 +153,12 @@ fun CameraScreen(){
                 object : ImageCapture.OnImageSavedCallback{
                     //Exito
                     override fun onImageSaved(outputFileResults: ImageCapture.OutputFileResults) {
+                        val latestFile = AppFile.latestPhotoFile(context)
+
+                        file.copyTo(latestFile, overwrite = true) // 👈 ESTA ES LA CLAVE
+
                         status = "Foto guardada"
-                        lastFileName = file.name
+                        lastFileName = latestFile.name
                     }
 
                     override fun onError(exception: ImageCaptureException) {
